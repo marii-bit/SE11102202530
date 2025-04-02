@@ -3,9 +3,76 @@
     <head>
         <title>Week 2 Lab</title>
         <meta charset="UTF-8">
+        <!-- Meta Elements offer better description of your page -->
+        <meta name="description" content="Tribute to Val Kilmer">
+        <meta name="keywords" content="Val Kilmer, Top Gun, actor, Tombstone, Batman, Bruce Wayne">
+        <meta name="author" content="Marisa">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+            body{
+                background-color: darkcyan;
+                font-family: Arial, Helvetica, sans-serif;
+                display: flex;
+                justify-content: center;
+            }
+            #main-container{
+                border: 1px solid black;
+                width: 750px;
+                padding: 15px;
+            }
+            h1{
+                text-align: center;
+                border-bottom: 1px solid black;
+                padding-bottom: 15px;
+            }
+            li{
+                text-decoration: none; 
+                display: inline;
+            }
+            a:link{
+                color: white;
+                text-decoration: none;
+                font-weight: bold;
+                padding-right: 30px;
+            }
+            a:visited{
+                color: white;
+            }
+            a:hover{
+                text-decoration: underline;
+            }
+            #navigation{
+                text-align: center;
+            }
+
+        </style>
     </head>
     <body>
         <div id="main-container"></div>
         <h1>Welcome to Week 2 Lab</h1>
+        <h2>This week we will be covering URL, URI, more HTML, some JavaScript, and a little CSS</h2>
+        <div id="navigation">
+            <ul>
+                <!--Example of Absolute path and URL (Uniform Resource Locator) -->
+                <li><a href="http://wwww.youtube.com">YouTube Link</a></li>
+                <!-- Example of a Relative path to a URL (Uniform Resource Identifier) -->
+                <li><a href="../index.html">Link back to Main Page</a></li>
+                <!-- Example of Absolute path that is a URI -->
+                <li><a href="https://e3.365dm.com/20/04/1600x900/skynews-val-kilmer-top-gun_4975019.jpg?20200423112138">Image of Val Kilmer</a></li>
+            </ul>
+            <div>
+                <div id="content">
+                    <iframe width="560" height="315" src="https://youtu.be/18x-7inBrmw?si=66APqe830iwPskW3" title="YouTube video player" frameborder="0" allow="accelorometer; autoplay; clipboard-write;encrypted-media; gyroscope; picture-in picture ;web-share" referrerpolicy="strict-orgin-when-cross-orgin" allowfullscreen></iframe>
+                    <br>
+                    <img scr="week2\images\Val kilmer.png" alt="Image of Val Kilmer from Tombsone"
+                    width="250"
+                    <br>
+                    <p><strong style="color: green;">Val Edward Kilmer</strong>, the <em>versatile actor</em> known for his roles as Iceman in Top Gun and Batman in Batman Forever, died from pneumonia at the age of 65. Kilmer was a stage actor before finding fame in comedy films like Real Genius and action movies like Top Gun. He earned acclaim for his portrayal of Jim Morrison in Oliver Stone's The Doors, even performing all the character's songs and releasing an album. </p>
+                    <div id="footer">
+                        <p>&copy; 2025 HTML/JavaScript Class</p>
+                    </div>
+                </div>
+            </div>
     </body>
     <html>
