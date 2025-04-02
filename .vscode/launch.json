@@ -1,0 +1,14 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Open firstWebPage.html",
+            "file": "c:\\Users\\Maris\\OneDrive - New England Institute of Technology\\TERM 2 (2025)\\INTERMEDIATE PROG USING PYTHON SE126-02\\GitHub\\SE126-wishart-202520-new\\SE11102202530\\week1\\firstWebPage.html"
+        }
+    ]
+}
