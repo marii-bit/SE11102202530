@@ -7,8 +7,8 @@
         {
             "type": "chrome",
             "request": "launch",
-            "name": "Open week1.html",
-            "file": "c:\\Users\\008027000\\OneDrive - New England Institute of Technology\\SE111.02\\week1\\week1.html"
+            "name": "Open firstWebPage.html",
+            "file": "c:\\Users\\Maris\\OneDrive - New England Institute of Technology\\TERM 2 (2025)\\INTERMEDIATE PROG USING PYTHON SE126-02\\GitHub\\SE126-wishart-202520-new\\SE11102202530\\week1\\firstWebPage.html"
         }
     ]
 }
