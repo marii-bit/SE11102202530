@@ -5,15 +5,21 @@
         <meta name="description" content="Biography of Marisa Wishart">
         <meta name="author" content="Marii">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <title>
-        [Marisa Wishart]- Biography
-        </title>
+        <title>[Marisa Wishart]- Biography</title>
         <style>
             body{
                 font-family: Arial, Helvetica, sans-serif;
                 margin: 0;
-                padding: 10;
+                padding: 0;
+                height: 100%;
+                background: linear-gradient(45deg, black, rgba(142, 46, 46, 0.74));
+            }
+            .wrapper{
+                width: 100%;
+                height: 100%;
+                border: 5px solid black;
+                padding: 20px;
+                box-sizing: border-box;
             }
             header{
                 text-align: center;
@@ -22,6 +28,28 @@
             nav{
                 text-align: center;
                 padding: 20px;
+            }
+            .container{
+                border: 2px solid black;
+                padding: 20px;
+            }
+            h1{
+                color: brown;
+                text-decoration: underline;
+                margin-bottom: 20px;
+            }
+            h2, h3{
+                color: green;
+            }
+            button{
+                background-color: black;
+                color: green;
+                border-radius: 8px;
+                padding: 10px 20px;
+            }
+            img{
+                border-radius: 15px;
+                border: 5px solid black;
             }
             footer{
                 text-align: center;
@@ -32,21 +60,28 @@
     </head>
     <body>
         <header id="header">
-            <h1>About Me: Marisa Wishart A Caymanian</h1>
         </header>
-        <div id="nav">
-            <a href="#bio">Bio</a>
-            <a href="#schooling">schooling</a>
-            <a href="#hobbies">hobbies</a>
-            <a href="#footer">footer</a>
+
+        <div class="wrapper">
+            <div class="container">
+                <h1>About Me: Marisa Wishart A Caymanian</h1>
+            </div>
         </div>
 
-        <section id="Bio">
+        <div id="nav">
+            <a href="#BIO">Bio</a>
+            <a href="#SCHOOLING">schooling</a>
+            <a href="#HOBBIES">hobbies</a>
+            <a href="#FOOTER">footer</a>
+        </div>
+
+        <section id="BIO">
             <h2>Bio</h2>
-        <p>Hello, I am Marisa Wishart! I am a Cybersecurity Studet with a passion for learning. I used to dislike coding, but this class has shown me the fun and creativity behind building a website. Personally, I love going out and creating my own expersiense in life. i focus on living freely and try not to worry about things I can't change or foresee in the future. I believe in taking life day by day always striving to improve.</p>
+        <p>Hello, I am Marisa Wishart! I am a Cybersecurity Studet with a passion for learning. I used to dislike coding, but this class has shown me the fun and creativity behind building a website. Personally, I love going out and creating my own expersiense in life. I focus on living freely and try not to worry about things I can't change or foresee in the future. I believe in taking life day by day always striving to improve.</p>
         <img src="images/unnamed.jpg" alt="Marisa Wishart" style="width: 350px;">
         </section>
         <hr>
+
         <section>
             <section id="schooling">
                 <h2>Schooling</h2>
@@ -54,6 +89,7 @@
                     <li>University of New England Tech - Assoctiates in Cybersecurity and Network Eng.</li>
                     <li>Clifton Hunter High School- High School Diploma with Honors</li>
                 </ol>
+                <img src="images/IMG_4491.jpg" alt="Marii" style="width: 350px;"
                 <hr>
             </section>
 
@@ -67,15 +103,9 @@
             <img src="images/unnamed2.jpg" alt="Marisa at HOME" style="width: 350px; height: auto;">
         </section>
 
-        <div id="footer"
+        <footer id="footer"
         <a href="Header">Back To Top</a><br>
-
         <img src="images/hobbies/" alt="Validation Screenshot">
-        <div>
-
-        </div>
-        </section>
-
-
+    </footer>
     </body>
 </html>
