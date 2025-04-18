@@ -1,0 +1,124 @@
+/* Basic Reset */
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #240fbd;
+    background-image: url("images/floors.jpg");
+    background-size: cover;
+    color: #eee;
+}
+
+/* Wrapper */
+#wrapper {
+    background-color: rgba(211, 25, 25, 0.85);
+    width: 980px;
+    margin: 40px auto;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #000;
+}
+
+/* Header */
+#header {
+    text-align: center;
+    padding: 30px 0;
+    background-image: url("images/sword3.png");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 200px;
+}
+
+.main-title {
+    font-size: 48px;
+    color: rgb(22, 6, 110);
+    text-shadow: 2px 2px 4px rgb(155, 47, 47);
+    text-decoration: underline;
+}
+
+/* Navigation */
+#nav-bar {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.link-button {
+    background-color: #120567;
+    color: white;
+    padding: 12px 25px;
+    margin: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.3s ease;
+}
+
+.link-button:hover {
+    background-color: crimson;
+    color: #fff;
+}
+
+/* Main Content */
+.section-title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #f3f3f3;
+    font-style: italic;
+}
+
+.main-pic {
+    display: block;
+    margin: 0 auto 20px auto;
+    width: 300px;
+    box-shadow: 2px 2px 8px black;
+}
+
+.tab {
+    padding: 0 20px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.info p {
+    margin: 5px 0;
+}
+
+/* Footer */
+#footer {
+    margin-top: 30px;
+    background-image: url("images/spidermanBckgrund.jpg");
+    background-size: cover;
+}
+
+.cover {
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-text {
+    color: #ccc;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.foot-img {
+    width: 40px;
+    margin: 5px;
+    transition: 0.3s ease;
+}
+
+.foot-img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px crimson;
+}
+
+.link {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.link:hover {
+    color: crimson;
+}
