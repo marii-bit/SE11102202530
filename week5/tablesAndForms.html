@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title> Tables and Forms | Week 5 </title>
+        <style> 
+            table, tr, th, td{
+                border: 1px solid black;
+            }
+            tr:nth-child(even){
+                background-color: cornflowerblue;
+            }
+        </style>
+    </head>
+<body>
+    <h1>Week 5 Tables and Forms</h1>
+    <h2>Table Example</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Program</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Michell</td>
+                <td>Sorreo</td>
+                <td>Software Engineering</td>
+            </tr>
+            <tr>
+                <td>Jordan</td>
+                <td>Dubreuil</td>
+                <td>Game Development and Design</td>
+            </tr>
+            <tr>
+                <td>Chris</td>
+                <td>Batz</td>
+                <td>Software Engineering</td>
+            </tr>
+            <tr>
+                <td>Marisa</td>
+                <td>Wishart</td>
+                <td>Cybersecurity Networking</td>
+            </tr>
+            <tr>
+                <td>Javier</td>
+                <td>Almeida</td>
+                <td>Software Engineering</td>
+            </tr>
+            <tr>
+                <td>Brad</td>
+                <td>Caiola</td>
+                <td>Cybersecurity Networking</td>
+            </tr>
+            <tr>
+                <td>Andrew</td>
+                <td>Johnston</td>
+                <td>Software Engineering</td>
+            </tr>
+            <tr>
+                <td>Tommy</td>
+                <td>Torico</td>
+                <td>Cybersecurity Networking</td>
+            </tr>
+            <tr>
+                <td>Ray</td>
+                <td>Hebert</td>
+                <td>Software Engineering</td>
+            </tr>
+            <tr>
+                <td>Tyler</td>
+                <td>Mattson</td>
+                <td>Cybersecurity Networking</td>
+            </tr>
+            <tr>
+                <td>Hailey</td>
+                <td>Arroyo</td>
+                <td>Cybersecurity Networking</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!--Basic Form Example-->
+    <h2>Basic Form Example</h2>
+    <form action="#"method="post"></form>
+    <label for="username">User Name</label>
+    <input type="text" name="username" id="username" placeholder="Enter Username....."> 
+    <br>
+    <label for="password">Password: </label>
+    <input type="password" name="password" id="password" placeholder="Enter Password......"> 
+    <br>
+    <input type="submit" value="Submit">
+
+<!---Form Inputs and Elements-->
+<h2>Example of Form with Table</h2>
+<form action="#" method="get">
+    <table>
+        <thead>
+            <tr>
+                <th>Label</th>
+                <th>Input</th>
+            </tr>
+        </thead>
+        <body>
+            <tr>
+                <td>Text Input</td>
+                <td> <input type="text" name="text-input" ></td>
+            </tr>
+            <tr>
+                <td>Checkbox</td>
+                <td><input type="checkbox" name="check" id="check"></td>
+            </tr>
+            <tr>
+                <td>Color</td>
+                <td><input type="color" name="color" id="color"></td>
+            </tr>
+            <tr>
+                <td>Date</td>
+                <td><input type="date" name="date" id="date"></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="email" name="email" id="email"></td>
+            </tr>
+            <tr>
+                <td>File</td>
+                <td><input type="file" name="file" id="file"></td>
+            </tr>
+            <tr>
+                <td>Time</td>
+                <td><input type="datetime-local" name="time" id="time"></td>
+            </tr>
+            <tr>
+                <td>Radio Button</td>
+                <td>
+                    <label for="yes">Yes: </label>
+                    <input type="radio" name="yes-or-no" id="yes">
+                    <br>
+                    <label for="no">No: </label>
+                    <input type="radio" name="yes-or-no" id="no">
+                    <br>
+                    <label for="maybe">Maybe: </label>
+                    <input type="radio" name="yes-or-no" id=" maybe" value="Maybe" >
+
+                </td>
+            </tr>
+            <tr>
+                <td>Phone</td>
+                <td><input type="tel" name="Phone" id="Phone" maxlength="10"></td>
+            </tr>
+            <tr>
+                <td>Text Area</td>
+                <td><textarea name="message" id="message" cols="30" rows="10" placeholder="Enter your message...."></textarea></td>
+            </tr>
+            <tr>
+                <td>Submit Button</td>
+                <td><button type="submit">Send Info</button></td>
+            </tr>
+        </body>
+    </table>
+</form>
+</body>
