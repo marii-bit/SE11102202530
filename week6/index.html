@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>JavaScript Pay Calculator</title>
+    </head>
+    <body>
+        <script>
+            let hourlyPay = Number(prompt("Enter your hourly pay:\n(default: $14.50)", "14.50"));
+            let hoursWorked = Number(prompt("Enter hours worked in a week;\n(Default: 32)","32"));
+            let taxRate = Number(prompt("Enter tax rate(as decimal):\n(Default: 0.20 for 20%)","0.20"));
+
+            let grossPay = hourlyPay * hoursWorked *2;
+            let taxAmount = grossPay * taxRate;
+            let netPay = grossPay - taxAmount;
+
+            grossPay = grossPay.toFixed(2);
+            taxAmount = taxAmount.toFixed(2);
+            netPay = netPay.toFixed(2);
+
+            alert(`Gross Pay: $${grossPay}\nUncle Sam's Share: $${taxAmount}\nNet Pay: $${netPay}`);
+
+            console.log(`Gross Pay: $${grossPay}`)
+            console.log(`Uncle Sam's Share: $${taxAmount}`)
+            console.log(`Net Pay: $${netPay}`)
+        </script>
+    </body>
+</html>
