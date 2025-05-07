@@ -3,12 +3,14 @@
     <head>
         <meta charset="UTF-8">
         <title>JavaScript Pay Calculator</title>
+        <meta name="author" content="Marisa Wishart">
+        
     </head>
     <body>
         <script>
-            let hourlyPay = Number(prompt("Enter your hourly pay:\n(default: $14.50)", "14.50"));
-            let hoursWorked = Number(prompt("Enter hours worked in a week;\n(Default: 32)","32"));
-            let taxRate = Number(prompt("Enter tax rate(as decimal):\n(Default: 0.20 for 20%)","0.20"));
+            let hourlyPay = Number(prompt("Enter your hourly pay"));
+            let hoursWorked = Number(prompt("Enter hours worked in a week"));
+            let taxRate = Number(prompt("Enter tax rate(as decimal):"));
 
             let grossPay = hourlyPay * hoursWorked *2;
             let taxAmount = grossPay * taxRate;
