@@ -74,13 +74,15 @@
                 *clicking the below button will trigger a call to the submitNow()
                 *success will be determined if correct info is displayed in the alert()-->
         <h3><i>If the above information is correct, please press "SUBMIT"</i></h3>
-        <input type="button" id="submit" value="SUBMIT">
+        <input type="submit" id="submit" value="SUBMIT">
     </form>
 
     <script>
+        var fname, lname, hours, rate;
         //edit the below statement to select the #enter-button id from the HTML file
-        document.querySelector("#enter-button").addEventListener(`click`, alertName)
+        document.querySelector('#enter-button').addEventListener(`click`, alertName);
         //document.querySelector("#submit").addEventListener(`click`, submitNow)
+        document.querySelector('#submit').addEventListener('click', submitNow);
 
 
 
@@ -88,10 +90,10 @@
             //get each *value* from the form elements (first name, last name, hours worked, hourly rate) and store them into vars
 
             /*USE THE FOLLOWING VARIABLE NAMES:*/
-            var fname = document.querySelector("#first").value;
-            var lname = document.querySelector("#last").value;
-            var hours = parseFloat(document.querySelector("#hours").value);
-            var rate = parseFloat(document.querySelector("#rate").value);
+            fname = document.querySelector("#first").value;
+            lname = document.querySelector("#last").value;
+            hours = parseFloat(document.querySelector("#hours").value);
+            rate = parseFloat(document.querySelector("#rate").value);
 
 
 
@@ -155,25 +157,17 @@
 
             //add a 'click' event listener to the #submit HTML element (HINT: this is the first step in the <script> )
             //when the #submit button is clicked, the submitNow function should run
-            document.querySelector("#submit").addEventListener('click', submitNow);
+            
 
-
-            function submitNow(e) {
+        }
+        function submitNow(e) 
+            {
 
                 /*NOTE FOR TESTING:
                     *if written correctly, you will see an alert() with all info entered as well as processed!*/
-
-                alert(`
-                ${full}
-                \nHOURS: ${hours}
-                \nRATE: $${rate.toFixed(2)}
-
-                \n\nGROSS PAY: $${gross.toFixed(2)}
-                \nTAX AMOUNT: $${taxAmount.toFixed(2)}
-                \nNET PAY: $${net.toFixed(2)}`);
+                alert(` ${full} \nHOURS: ${hours} \nRATE: $${rate.toFixed(2)} \n\nGROSS PAY: $${gross.toFixed(2)} \nTAX AMOUNT: $${taxAmount.toFixed(2)} \nNET PAY: $${net.toFixed(2)}`);
             }
 
-        }
 
     </script>
 
