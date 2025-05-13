@@ -1,58 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--I moved the event listener for submitNow and the variable declarations to the global scope, and I took the alert out of the submit function. The problem-->
     <!--edit the meta tag below to hold YOUR name!-->
     <meta name="author" content="Marisa Wishart">
     <meta name="description" content="Week 7 Assignment practicing Javascript & HTML">
     <title>Week 7 | Pay Form Calculator Assignment</title>
 </head>
-
 <body>
 
     <!--title of the page-->
-    <h1> Pay Calculator Form </h1>
+   <h1> Pay Calculator Form </h1>
 
-    <!--start of the form-->
-    <!--each <input> must have an id that matches its corresponding label -->
-    <!--each form element is separated by a break space (new line) -->
+   <!--start of the form-->
+   <!--each <input> must have an id that matches its corresponding label -->
+   <!--each form element is separated by a break space (new line) -->
     <form>
         <table>
             <tr>
                 <td><label for="first">First Name: </label></td>
                 <td><input type="text" id="first"></td>
             </tr>
-
-            <br>
             <tr>
                 <td><label for="last">Last Name: </label></td>
                 <td><input type="text" id="last"></td>
             </tr>
-            <br>
-
             <tr>
                 <td><label for="hours">Hours Worked: </label></td>
                 <td><input type="text" id="hours"></td>
             </tr>
-
-            <br>
             <tr>
                 <td><label for="rate">Hourly Rate: </label></td>
                 <td><input type="text" id="rate"></td>
             </tr>
-            <br>
-
-            <br>
-            <tr>
-                <td colspan="2">
-
-                    <!-- give the button below (that is the only form element without a label) an id of "enter-button"-->
-                    <input type="button" id="enter-button" value="Enter">
-                </td>
-            </tr>
         </table>
+
+        <br>
+        <br>
+
+        <!-- give the button below (that is the only form element without a label) an id of "enter-button"-->
+        <input type="button" id="enter-button" value="Enter" style="margin-left: 10em;">
 
         <br>
         <br>
@@ -60,8 +49,7 @@
         <div id="final" style="border:1px solid rgb(87, 86, 86); padding:15px; background-color:rgb(168, 168, 168);">
 
             <h3>Employee Info: </h3>
-            <p id="info" style="font-family:Courier New, monospace;"><i>Information will be loaded once above form is
-                    filled.</i></p>
+            <p id="info" style="font-family:Courier New, monospace;"><i>Information will be loaded once above form is filled.</i></p>
             <!---NOTES FOR TESTING:
                     *below is where the form values (and new values processed by the js) will be displayed-->
             <p id="check" style="font-family:Courier New, monospace; width:220px; text-align:right;"></p>
@@ -74,103 +62,79 @@
                 *clicking the below button will trigger a call to the submitNow()
                 *success will be determined if correct info is displayed in the alert()-->
         <h3><i>If the above information is correct, please press "SUBMIT"</i></h3>
-        <input type="submit" id="submit" value="SUBMIT">
+        <input type="submit" id="submit" value="SUBMIT" style="margin-left: 10em;">
     </form>
 
     <script>
-        var fname, lname, hours, rate;
+        var fname, lname, full, hours, rate, gross, tax_amount, net;
         //edit the below statement to select the #enter-button id from the HTML file
-        document.querySelector('#enter-button').addEventListener(`click`, alertName);
-        //document.querySelector("#submit").addEventListener(`click`, submitNow)
+        document.querySelector('#enter-button').addEventListener('click', alertName);
+        //add a 'click' event listener to the #submit HTML element (HINT: this is the first step in the <script> )
+        //when the #submit button is clicked, the submitNow function should run
         document.querySelector('#submit').addEventListener('click', submitNow);
 
-
-
-        function alertName() {
+        function alertName(e)
+        {
             //get each *value* from the form elements (first name, last name, hours worked, hourly rate) and store them into vars
 
-            /*USE THE FOLLOWING VARIABLE NAMES:*/
-            fname = document.querySelector("#first").value;
-            lname = document.querySelector("#last").value;
-            hours = parseFloat(document.querySelector("#hours").value);
-            rate = parseFloat(document.querySelector("#rate").value);
+            // THIS WAS A MULTI-LINE COMMENT BUT IT WAS BREAKING SOMETHING IN MY VSC (EITHER BUILT IN LOGIC OR PERHAPS AN EXTENSION) AND CAUSING THE NAMES TO BE INTERPRETED LIKE VARIABLES.
 
-
+            //USE THE FOLLOWING VARIABLE NAMES:
+            //fname --> first name, #first
+            //lname --> last name, #last
+            //hours --> hours worked, #hours
+            //rate --> hourly rate, #rate
+        
+            fname = document.querySelector('#first').value;
+            lname = document.querySelector('#last').value;
+            hours = document.querySelector('#hours').value;
+            rate = document.querySelector('#rate').value;
 
             //console.log() all four values
-
-            console.log(fname)
-            console.log(lname)
-            console.log(hours)
-            console.log(rate)
+            console.log(fname);
+            console.log(lname);
+            console.log(hours);
+            console.log(rate);
 
             //add the first and last name values together and store into a new variable called 'full' holding the user's full name
-            var full = fname + "" + lname;
+            full = `${fname} ${lname}`;
 
             //console.log() the full name value
-            console.log(full)
-
-
+            console.log(full);
             //convert both hours and rate to Number() data types
-            var gross = hours * rate;
-            var taxAmount = gross * 0.2;
-            var net = gross - taxAmount;
-
-
+            hours = parseFloat(hours);
+            rate = parseFloat(rate);
             //NOTE: DO NOT MOVE ON UNTIL YOU ARE ABLE TO DISPLAY THE CORRECT VALUES! This is a practice in testing as you build! 
 
             //create gross, taxAmount, net variables and store corresponding data to them
             //use a tax percentage of 20% (.2)
-
-
+            const tax = .20; 
+            gross = hours * rate * 2;
+            tax_amount = gross * tax;
+            net = gross - tax_amount;
             //console.log() all three processed values, rounded to the second decimal place
-            console.log(gross.toFixed(2));
-            console.log(taxAmount.toFixed(2));
-            console.log(net.toFixed(2));
-
-
+            console.log(
+                tax.toFixed(2),
+                gross.toFixed(2),
+                tax_amount.toFixed(2)
+            );
             //create a new variable called 'finalMessage' that holds the literal string value of the following, each value on a new line (use <br>): full name, hours worked*, hourly rate*   *--> rounded to the second decimal place 
-            var finalMessage = `
-                full Name: ${full} <br>
-                Hours Worked: ${hours} <br>
-                Hourly Rate: $${rate.toFixed(2)} <br>
-            `;
-
-
+            var finalMessage = `Full Name: ${full}<br>Hours Worked: ${hours.toFixed(2)}<br>Hourly Rate: $${rate.toFixed(2)}<br>`;
             //create a new var called 'info' and store the entire #info *HTML element* to it
-            document.querySelector(`#info`).innerHTML = finalMessage;
-
+            var info = document.querySelector('#info');
             //create a new var called 'num' and store the entire #check *HTML element* to it
-
-
+            var num = document.querySelector('#check');
             //edit the innerHTML of the #info element (now the 'info' js var) to hold the value of 'finalMessage'
-            var payMessage = `
-                Gross Pay: $${gross.toFixed(2)} <br>
-                Tax Amount: $${taxAmount.toFixed(2)} <br>
-                Net Pay: $${net.toFixed(2)} <br>
-            `;
-
-
+            info.innerHTML = finalMessage;
             //edit the innerHTML of the #check element (now the 'check' js var) to hold a literal string with the following values: gross pay, tax amount, net pay. All three values should be rounded to the second decimal place.  Use <br> to break onto a new line for each value
-            document.querySelector('#check').innerHTML = payMessage;
-
-
-            //add a 'click' event listener to the #submit HTML element (HINT: this is the first step in the <script> )
-            //when the #submit button is clicked, the submitNow function should run
-            
-
+            check.innerHTML = `Gross Pay: $${gross.toFixed(2)}<br>Tax Amount: $${tax_amount.toFixed(2)}<br>Net Pay: $${net.toFixed(2)}`;
         }
-        function submitNow(e) 
+        function submitNow(e)
             {
-
                 /*NOTE FOR TESTING:
                     *if written correctly, you will see an alert() with all info entered as well as processed!*/
-                alert(` ${full} \nHOURS: ${hours} \nRATE: $${rate.toFixed(2)} \n\nGROSS PAY: $${gross.toFixed(2)} \nTAX AMOUNT: $${taxAmount.toFixed(2)} \nNET PAY: $${net.toFixed(2)}`);
+                alert(`${full}\nHOURS: ${hours}\nRATE: $${rate.toFixed(2)}\n\nGROSS PAY: $${gross.toFixed(2)}\nTAX AMOUNT: $${tax_amount.toFixed(2)}\nNET PAY: $${net.toFixed(2)}`);
             }
-
-
     </script>
-
 </body>
-
 </html>
